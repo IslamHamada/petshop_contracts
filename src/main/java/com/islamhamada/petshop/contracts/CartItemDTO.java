@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class CartItemDTO {
     private long id;
-    private long userId;
-    private long productId;
+    private long user_id;
+    private long product_id;
     private int count;
 }
