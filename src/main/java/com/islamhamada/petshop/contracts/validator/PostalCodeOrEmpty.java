@@ -3,6 +3,7 @@ package com.islamhamada.petshop.contracts.validator;
 import jakarta.validation.Constraint;
 import jakarta.validation.ConstraintValidator;
 import jakarta.validation.ConstraintValidatorContext;
+import jakarta.validation.Payload;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -14,6 +15,8 @@ import java.lang.annotation.Target;
 @Constraint(validatedBy = PostalCodeOrEmptyValidator.class)
 public @interface PostalCodeOrEmpty {
     String message() default "add valid postal code or keep empty";
+    Class<?>[] groups() default {};
+    Class<? extends Payload>[] payload() default {};
 }
 
 class PostalCodeOrEmptyValidator implements ConstraintValidator<PostalCodeOrEmpty, String> {
