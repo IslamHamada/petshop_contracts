@@ -25,6 +25,6 @@ class PhoneNumberOrEmptyValidator implements ConstraintValidator<PhoneNumberOrEm
     public boolean isValid(String s, ConstraintValidatorContext constraintValidatorContext) {
         if(s == null || s.isEmpty())
             return false;
-        return s.matches("(^\\+[1-9]\\d|0)\\d{7,10}$");
+        return s.matches("(^\\+[1-9]\\d|0)\\d{7,12}$");
     }
 }
