@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class ErrorResponse {
+public class RestExceptionResponse {
     private String error_code;
     private String error_message;
 }
