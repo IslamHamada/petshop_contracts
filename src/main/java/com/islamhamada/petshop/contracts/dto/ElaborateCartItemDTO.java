@@ -14,14 +14,14 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class ElaborateCartItemDTO {
-    @Positive
+    @PositiveOrZero
     private long product_id;
     @NotBlank
     private String product_name;
     @Positive
     private double product_price;
     private String product_image;
-    @Positive
+    @PositiveOrZero
     private long cart_item_id;
     @Positive
     private int cart_item_count;
